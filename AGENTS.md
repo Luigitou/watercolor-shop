@@ -1,4 +1,3 @@
-
 You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
 
 ## TypeScript Best Practices
@@ -54,3 +53,11 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+## Project Architecture
+
+- **`src/app/core`**: Singleton services, guards, interceptors, models, and utilities. These are instantiated once and used across the application.
+- **`src/app/shared`**: Reusable UI components, directives, and pipes shared across multiple features.
+- **`src/app/features`**: Business features (home, products, cart, checkout). Ideally implemented as lazy-loaded routes.
+- **`src/app/layouts`**: Global layout components (e.g., MainLayout, AuthLayout) that wrap features.
+- **`src/environments`**: Environment-specific configurations (e.g., API URLs, production flags).
